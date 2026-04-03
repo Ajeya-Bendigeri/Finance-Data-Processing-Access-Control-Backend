@@ -11,7 +11,14 @@ from routes.admin_routes import admin_bp
 
 def create_app():
     app = Flask(__name__)
-    CORS(app)
+
+    CORS(
+        app,
+        resources={r"/*": {"origins": "*"}},
+        allow_headers=["Content-Type", "Authorization"],
+        methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+        supports_credentials=True
+    )
 
     init_db()
     init_jwt(app)
