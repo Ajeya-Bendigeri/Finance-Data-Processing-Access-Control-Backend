@@ -1,4 +1,5 @@
-const BASE_URL = "http://127.0.0.1:5000";
+const BASE_URL = "";
+// const BASE_URL = "https://finance-data-processing-access-control-9mzm.onrender.com";
 
 function saveAuth(token, role) {
     localStorage.setItem("token", token);
