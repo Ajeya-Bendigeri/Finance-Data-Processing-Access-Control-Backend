@@ -1,0 +1,10 @@
+flask
+mongoengine
+python-dotenv
+flask-jwt-extended
+bcrypt
+flasgger
+flask-limiter
+redis
+flask-cors
+dotenv

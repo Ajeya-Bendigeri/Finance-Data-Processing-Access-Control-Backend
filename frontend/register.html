@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — FinFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-card">
+
+    <!-- Brand -->
+    <div class="auth-logo">
+      <div class="auth-logo-icon">💸</div>
+      <span class="auth-logo-name">FinFlow</span>
+    </div>
+
+    <h2>Create account</h2>
+    <p class="auth-subtitle">Start managing your finances today</p>
+
+    <!-- Name -->
+    <div class="field">
+      <input id="name" type="text" placeholder="Full name" autocomplete="name">
+      <label for="name">Full name</label>
+    </div>
+
+    <!-- Email -->
+    <div class="field">
+      <input id="reg_email" type="email" placeholder="Email address" autocomplete="email">
+      <label for="reg_email">Email address</label>
+    </div>
+
+    <!-- Password -->
+    <div class="field password-wrap">
+      <input id="reg_password" type="password" placeholder="Password" autocomplete="new-password">
+      <label for="reg_password">Password</label>
+      <span class="eye-btn" onclick="togglePassword('reg_password')" title="Toggle visibility">
+        👁
+      </span>
+    </div>
+
+    <!-- Role -->
+    <div class="field select-wrap">
+      <select id="role">
+        <option value="viewer">Viewer</option>
+        <option value="analyst">Analyst</option>
+        <option value="admin">Admin</option>
+      </select>
+      <label for="role">Role</label>
+    </div>
+
+    <button class="btn btn-primary" onclick="register()">Create account</button>
+
+    <div class="auth-divider">or</div>
+
+    <div class="auth-footer">
+      Already have an account? <a href="login.html">Sign in →</a>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

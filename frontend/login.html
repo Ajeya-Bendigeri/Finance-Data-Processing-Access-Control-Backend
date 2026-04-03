@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — FinFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-card">
+
+    <!-- Brand -->
+    <div class="auth-logo">
+      <div class="auth-logo-icon">💸</div>
+      <span class="auth-logo-name">FinFlow</span>
+    </div>
+
+    <!-- <h2>Welcome back</h2> -->
+    <h2> Finance Dashboard Backend with Role-Based Access </h2>
+    <p class="auth-subtitle">Sign in to your workspace</p>
+
+    <!-- Email -->
+    <div class="field">
+      <input id="email" type="email" placeholder="Email address" autocomplete="email">
+      <label for="email">Email address</label>
+    </div>
+
+    <!-- Password -->
+    <div class="field password-wrap">
+      <input id="password" type="password" placeholder="Password" autocomplete="current-password">
+      <label for="password">Password</label>
+      <span class="eye-btn" onclick="togglePassword('password')" title="Toggle visibility">
+        👁
+      </span>
+    </div>
+
+    <button class="btn btn-primary" onclick="login()">Sign in</button>
+
+    <div class="auth-divider">or</div>
+
+    <div class="auth-footer">
+      Don't have an account? <a href="register.html">Create one →</a>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
