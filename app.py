@@ -17,7 +17,6 @@ def create_app():
         resources={r"/*": {"origins": "*"}},
         allow_headers=["Content-Type", "Authorization"],
         methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
-        supports_credentials=True
     )
 
     init_db()
