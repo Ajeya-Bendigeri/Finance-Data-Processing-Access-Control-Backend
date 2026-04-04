@@ -2,7 +2,6 @@ from flask_jwt_extended import get_jwt, jwt_required, get_jwt_identity
 from services.admin_service import get_all_users, update_user_role, delete_user
 from flask import request
 
-@jwt_required()
 def get_users():
     role = get_jwt().get("role")
 
@@ -12,7 +11,6 @@ def get_users():
     return get_all_users()
 
 
-@jwt_required()
 def update_user(user_id):
     role = get_jwt().get("role")
 
@@ -28,7 +26,6 @@ def update_user(user_id):
     return update_user_role(user_id, new_role)
 
 
-@jwt_required()
 def delete_user_controller(user_id):
     role = get_jwt().get("role")
     current_user_id = get_jwt_identity()
